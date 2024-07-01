@@ -1,0 +1,31 @@
+{
+  "name": "rails-next-app",
+  
+  "dockerComposeFile": ["docker-compose.yml"],
+  
+  "service": "app",
+
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+    }
+  },
+
+  "workspaceFolder": "/workspaces",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "atipugin.rails-partial",
+        "aki77.rails-routes",
+        "aki77.rails-db-schema",
+        "Blinknlights.fuzzy-ruby-server"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
