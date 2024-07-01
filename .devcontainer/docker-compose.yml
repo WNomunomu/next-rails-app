@@ -10,6 +10,7 @@ services:
     command: sleep infinity
     ports:
       - "3000:3000"
+      - "3001:3001"
   db:
     image: mysql:8.0
     env_file:
