@@ -1,18 +1,15 @@
 {
   "name": "rails-next-app",
   
-  "dockerComposeFile": ["docker-compose.yml"],
+  "dockerComposeFile": "docker-compose.yml",
   
   "service": "app",
 
   "features": {
-    "ghcr.io/devcontainers/features/ruby:1": {
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-    }
+    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {}
   },
 
-  "workspaceFolder": "/workspaces",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   
   "customizations": {
     "vscode": {

@@ -1,38 +1,15 @@
 version: '3'
 
 services:
-  # server:
-  #   env_file:
-  #     - ../.env
-  #   build:
-  #     context: .
-  #     dockerfile: server.dockerfile
-  #   volumes:
-  #     - ..:/workspaces:delegated
-  #   command: sleep infinity
-  #   ports:
-  #     - 3000:3000
-  #   depends_on:
-  #     - db
-  # client:
-  #   build:
-  #     context: .
-  #     dockerfile: client.dockerfile
-  #   volumes:
-  #     - ..:/workspaces:delegated
-  #   command: sleep infinity
-  #   ports:
-  #     - 8080:3000
   app:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspaces:delegated
+      - ../..:/workspaces:cached
     command: sleep infinity
     ports:
-      - "3000:3000" # Rails
-      - "3001:3001" # Next.js
+      - "3000:3000"
   db:
     image: mysql:8.0
     env_file:
