@@ -1,0 +1,8 @@
+{
+  "name": "rails-next-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/WNomunomu/rails-next-app.git",
+  "author": "WNomunomu <kohsei.nmr@gmail.com>",
+  "license": "MIT"
+}
