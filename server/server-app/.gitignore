@@ -40,3 +40,5 @@ doc/
 # Ignore SQLite database files
 /db/*.sqlite3
 /db/*.sqlite3-journal
+
+/storage
