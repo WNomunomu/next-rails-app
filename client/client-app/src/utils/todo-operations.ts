@@ -24,7 +24,6 @@ export const createTodos = async (title: string) => {
         'Content-Type': 'application/json',
       },
     });
-    return response;
   } catch (err) {
     console.error(err);
   }
