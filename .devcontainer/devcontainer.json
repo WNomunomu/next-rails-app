@@ -18,7 +18,12 @@
         "atipugin.rails-partial",
         "aki77.rails-routes",
         "aki77.rails-db-schema",
-        "Blinknlights.fuzzy-ruby-server"
+        "Blinknlights.fuzzy-ruby-server",
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "shinnn.stylelint",
+        "stylelint.vscode-stylelint"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"

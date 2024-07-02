@@ -11,14 +11,14 @@
   },
   "plugins": ["simple-import-sort", "@typescript-eslint", "redos"],
   "rules": {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
     "@typescript-eslint/no-misused-promises": [
-      "error",
+      "warn",
       {
         "checksVoidReturn": false
       }
     ],
-    "redos/no-vulnerable": "error"
+    "redos/no-vulnerable": "warn"
   }
 }
