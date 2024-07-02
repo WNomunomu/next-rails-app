@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts 'Creating todos...'
+
+5.times do |i|
+  Todo.create(title: "Todo#{i + 1}", completed: false)
+end
+
+puts '...Finished!'
