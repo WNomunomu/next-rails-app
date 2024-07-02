@@ -15,16 +15,21 @@ export const TodoCreateForm = () => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmitTodoCreateForm}>
-      <label htmlFor="text" className="form-label">Todo title</label>
+    <>
       <input
         type="text"
         className="form-control"
         onChange={handleChange}
         placeholder="Enter todo title"
       />
-      <button type="submit" className="btn btn-primary">Create</button>
-    </form>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        onClick={handleSubmitTodoCreateForm}
+      >
+        Create
+      </button>
+    </>
   );
 
 };
