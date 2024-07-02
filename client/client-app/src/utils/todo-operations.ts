@@ -1,6 +1,4 @@
-import { headers } from "next/headers";
-
-const axios = require('axios');
+import axios from 'axios';
 
 export const getTodos = async () => {
   try {
@@ -10,11 +8,16 @@ export const getTodos = async () => {
   catch (err) {
     console.error(err);
   }
+  // const response = await fetch('http://localhost:3000/todos');
+  // if (!response.ok) {
+  //   throw new Error('Failed to fetch data');
+  // }
+  // return response.json();
 };
 
 export const createTodos = async (title: string) => {
   try {
-    const response = await axios.post('http://localhost:3000/todos', {
+    await axios.post('http://localhost:3000/todos', {
       todo: {
         title: title,
         completed: false,
@@ -31,7 +34,7 @@ export const createTodos = async (title: string) => {
 
 export const updateTodos = async (editTitle: string, id: string) => {
   try {
-    const response = await axios.put(`http://localhost:3000/todos/${id}`, {
+    await axios.put(`http://localhost:3000/todos/${id}`, {
       todo: {
         title: editTitle,
       },
