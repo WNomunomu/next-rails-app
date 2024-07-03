@@ -8,11 +8,6 @@ export const getTodos = async () => {
   catch (err) {
     console.error(err);
   }
-  // const response = await fetch('http://localhost:3000/todos');
-  // if (!response.ok) {
-  //   throw new Error('Failed to fetch data');
-  // }
-  // return response.json();
 };
 
 export const createTodos = async (title: string) => {
