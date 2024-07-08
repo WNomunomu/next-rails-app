@@ -1,7 +1,8 @@
-import { AxiosResponse } from 'axios';
 import { useEffect,useState } from 'react';
 
 import { getTodos } from "@/utils/todo-operations";
+
+import { TodoDeleteButton } from './TodoDeleteButton';
 
 type Todo = {
   id: string,
@@ -41,9 +42,12 @@ export const TodoList = () => {
       <h1>Todo list</h1>
       <ul>
         {todos?.map(todo => (
-          <li key={todo.id}>
-            {todo.title} - {todo.completed ? 'Completed' : 'Incomplete'}
-          </li>
+          <>
+            <li key={todo.id}>
+              {todo.title} - {todo.completed ? 'Completed' : 'Incomplete'}
+            </li>
+            <TodoDeleteButton id={todo.id} />
+          </>
         ))}
       </ul>
     </div>
